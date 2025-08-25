@@ -3,13 +3,15 @@ kind: Component
 metadata:
   name: mosip-infra
   description: Infrastructure repository for MOSIP deployment by Infosys
-  tags:
-    - mosip
-    - infrastructure
-    - deployment
+  annotations:
+    github.com/project-slug: Infosys/mosip-infra
+    backstage.io/techdocs-ref: dir:.
+  tags: [mosip, infrastructure, deployment]
 spec:
   type: infrastructure
   lifecycle: production
-  owner: team-infra
-  system: mosip-platform
- 
+  owner: group:admin-group 
+  ownedBy: [group:ADMCOE-Team, group:admin-group, group:dev-group]
+  dependsOn: []
+  system: "mosip-platform"
+
